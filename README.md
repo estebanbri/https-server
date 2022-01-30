@@ -74,3 +74,6 @@ Fuente:
 - https://www.youtube.com/watch?v=eBEq0Kv7vsw (Code Java: Configure HTTPS for Spring Boot application on localhost with self-signed certificate)
 - https://www.youtube.com/watch?v=HLSmjZ5vN0w (Romanian Coder: [Spring Boot Security] #15 Enable HTTPS/SSL in Spring Boot)(este video muestra redireccion http puerto 80 a puerto securizado en nuestro caso 8443 de nuestro server)
 - https://www.youtube.com/watch?v=VSi3KFlVAbE (iamakrem: SSL with Java example using simple client server echo app)
+- https://github.com/greenlearner01/ssl
+- https://www.youtube.com/watch?v=QXoleqFvhSE (How to start spring boot application in ssl mode)
+- https://www.youtube.com/watch?v=SbuPNXXvTJA (Access HTTPS RESTful service using RestTemplate || Bypass SSL validation in Spring RestTemplate)
