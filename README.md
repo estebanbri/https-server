@@ -8,12 +8,12 @@ Proyecto de prueba de creacion de app web spring boot bajo SSL.
 
 #### Del lado del server:
 
-1. ###### First Generate the server Certificate and public/private key and store it in keystore file
+1. ##### First Generate the server Certificate and public/private key and store it in keystore file
 
 > keytool -genkey -keyalg RSA -keysize 2048 -validity 360 -alias mykey -keystore myKeyStore.jks -ext san=dns:localhost
 
 
-2. ###### Configurar la ubicacion del keyStore, alias de la key public y passwords
+2. ##### Configurar la ubicacion del keyStore, alias de la key public y passwords
 > - <ins>**Si tu app es Spring Boot**</ins>: Definir las properties (en caso de que tu app sea spring boot) que figuran en el application.properties que configuran a tomcat para comunicarse via https en vez de http.
 >
 > 
@@ -24,7 +24,7 @@ Proyecto de prueba de creacion de app web spring boot bajo SSL.
 >   System.setProperty("javax.net.ssl.keyStorePassword","qwerty");  
 >   ... demas properties etc  
 
-3. ###### Export the certficate and the public key that should be send to the client
+3. ##### Export the certficate and the public key that should be send to the client
 > keytool -export -alias mykey -keystore myKeyStore.jks -file mykey.crt
 
 #### Del lado del cliente:
