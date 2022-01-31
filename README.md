@@ -47,34 +47,38 @@ Proyecto de prueba de creacion de app web spring boot bajo SSL.
 
 Paso 1:
 El cliente (browser) hace un request a yahoo.com.  
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+![This is an image](https://github.com/estebanbri/ssl-server/blob/master/Steps-SSL-Images/step1.png)
 
 Paso 2:
 El server le envia al cliente su certificado ssl + la llave publica del server.  
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+![This is an image](https://github.com/estebanbri/ssl-server/blob/master/Steps-SSL-Images/step2.1.png)  
+![This is an image](https://github.com/estebanbri/ssl-server/blob/master/Steps-SSL-Images/step2.2.png)  
 
 Paso 3:
 El cliente valida el certificado si fue emitido por un CA y los parametros si son validos.
 En este paso el cliente valida que es realmente yahoo.com a quien nos estaremos conectando y no a otro server (hacker).
 Si el encuentra en su TrustStore el certificado entonces es valido le aparece un candado verde en el navegador y sino uno rojo avisando que es peligroso ingresar a dicha web.  
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+![This is an image](https://github.com/estebanbri/ssl-server/blob/master/Steps-SSL-Images/step3.1.png)  
+![This is an image](https://github.com/estebanbri/ssl-server/blob/master/Steps-SSL-Images/step3.2.png)  
+![This is an image](https://github.com/estebanbri/ssl-server/blob/master/Steps-SSL-Images/step3.3.png)    
 
 Paso 4:
 El cliente genera un par de shared key (simetric key). Una de las dos key generadas por el cliente
 la va a enviar al server en una caja cerrada con la llave publica del server.  
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
-
+![This is an image](https://github.com/estebanbri/ssl-server/blob/master/Steps-SSL-Images/step4.1.png)
+![This is an image](https://github.com/estebanbri/ssl-server/blob/master/Steps-SSL-Images/step4.2.png)
+![This is an image](https://github.com/estebanbri/ssl-server/blob/master/Steps-SSL-Images/step4.3.png)
 Paso 5:
 Cuando el server recibe la caja cerrada usa su clave privada para abrir dicha caja que contiene la shared key enviada por el cliente.  
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg
+![This is an image](https://github.com/estebanbri/ssl-server/blob/master/Steps-SSL-Images/step5.png)
 
 Paso 6:
 Listo, todo request y response tanto desde el cliente como desde el server van a estar cifrados usando la misma shared key (generada por el cliente)  
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+![This is an image](https://github.com/estebanbri/ssl-server/blob/master/Steps-SSL-Images/step6.1.png)
 
 
-Resultado final de tu ssl server al ser llamado desde un navegador y que en el cliente se haya instalado el certificado  
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+Resultado final de tu ssl server al ser llamado desde un navegador y que en el cliente (es decir el navegador) se haya instalado el certificado  
+![This is an image](https://github.com/estebanbri/ssl-server/blob/master/Steps-SSL-Images/ssl-server-execution.png)
 
 Fuente:
 - https://www.youtube.com/watch?v=33VYnE7Bzpk (Sunny Classroom: How SSL certificate works?)
