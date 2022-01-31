@@ -10,7 +10,7 @@ Proyecto de prueba de creacion de app web spring boot bajo SSL.
 
 1. ##### First Generate the server Certificate and public/private key and store it in keystore file
 
-> keytool -genkey -keyalg RSA -keysize 2048 -validity 360 -alias mykey -keystore myKeyStore.jks -ext san=dns:localhost
+> keytool -genkey -keyalg RSA -keysize 2048 -validity 360 -alias serverKeys -keystore myKeyStore.jks -ext san=dns:localhost
 
 
 2. ##### Configurar la ubicacion del keyStore, alias de la key public y passwords
@@ -25,7 +25,7 @@ Proyecto de prueba de creacion de app web spring boot bajo SSL.
 >   ... demas properties etc  
 
 3. ##### Export the certficate and the public key that should be send to the client
-> keytool -export -alias mykey -keystore myKeyStore.jks -file mykey.crt
+> keytool -export -alias serverKeys -keystore myKeyStore.jks -file serverPublicKey.crt
 
 #### Del lado del cliente:
 > <ins>**En caso de que el cliente sea el browser**</ins>: Simplemente installa el .cert haciendole doble click y listo.
