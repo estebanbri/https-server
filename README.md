@@ -80,6 +80,9 @@ Listo, todo request y response tanto desde el cliente como desde el server van a
 Resultado final de tu ssl server al ser llamado desde un navegador y que en el cliente (es decir el navegador) se haya instalado el certificado  
 ![This is an image](https://github.com/estebanbri/ssl-server/blob/master/Steps-SSL-Images/ssl-server-execution.png)
 
+<ins>Una imagen vale mas que mil palabras</ins>:    
+Como vemos en el keyStore (Gracias a KeyStore Explorer la herramienta grafica) hemos generado el par de key's publica y privada. Y tambien vemos que el certificado que exportamos contiene la key  publica del server.(Este ultimo paso seria unicamente pasa pasarle el certificado para que se lo instalen del lado del cliente)  
+![This is an image](https://github.com/estebanbri/https-server/blob/master/Steps-SSL-Images/keystore-detail.png)
 Fuente:
 - https://www.youtube.com/watch?v=33VYnE7Bzpk (Sunny Classroom: How SSL certificate works?)
 - https://www.youtube.com/watch?v=eBEq0Kv7vsw (Code Java: Configure HTTPS for Spring Boot application on localhost with self-signed certificate)
